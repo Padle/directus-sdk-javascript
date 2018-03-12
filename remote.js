@@ -270,6 +270,10 @@ class RemoteInstance {
   getMessage(id = requiredParam('id')) {
     return this._get(`messages/rows/${id}`);
   }
+  
+  sendMessage(data = requiredParam('data')) {
+    return this._post('messages/rows/', data);
+  }
 
   // Activity
   // ----------------------------------------------------------------------------------
